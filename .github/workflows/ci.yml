@@ -65,7 +65,7 @@ jobs:
           cache: pip
 
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.15.10
 
       - name: Check code style
         run: ruff check .
