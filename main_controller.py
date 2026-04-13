@@ -110,7 +110,7 @@ class AutopostController:
                         article.id,
                         rating_result.interest_score,
                         rating_result.lurkable_score,
-                        rating_result.rhymable_score,           #AJRM   поправить на reasoning
+                        rating_result.reasoning,
                         rating_result.category
                     )
 
@@ -119,8 +119,8 @@ class AutopostController:
                             f"Rated article {article.id}: "
                             f"interest={rating_result.interest_score}, "
                             f"lurkable={rating_result.lurkable_score}, "
-                            f"reasoning = {rating_result.rhymable_score}, "     #AJRM   поправить на reasoning
-                            f"category = {rating_result.category}"
+                            f"reasoning={rating_result.reasoning}, "
+                            f"category={rating_result.category}"
                         )
 
                     # Rate limiting

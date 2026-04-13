@@ -90,9 +90,8 @@ class AIProcessor:
                 return RatingResult(
                     interest_score=result_data['interest_score'],
                     lurkable_score=result_data['lurkable_score'],
-                    rhymable_score=result_data['rhymable_score'],
-                    reasoning=result_data['reasoning'],
-                    category = result_data['category']
+                    reasoning=result_data.get('reasoning', ''),
+                    category=result_data['category'],
                 )
             except json.JSONDecodeError:
                 self.logger.error(f"Failed to parse JSON response: {result_text}")
