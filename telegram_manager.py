@@ -2,15 +2,11 @@
 #import telegram
 #from telegram.error import TelegramError
 import requests
-from typing import Optional
-import asyncio
-import io
-from urllib.parse import urlparse
 
 from models import Article
 from config import config
-from aiogram import Bot, Dispatcher, types
-from aiogram.exceptions import TelegramAPIError, TelegramBadRequest, TelegramNetworkError
+from aiogram import Bot
+from aiogram.exceptions import TelegramAPIError
 from aiogram.types import BufferedInputFile  # Add this import
 
 
@@ -96,13 +92,13 @@ class TelegramManager:
             processed_image = self.image_processor.process_image_from_url(article.media_content)
 
             if not processed_image:
-                self.logger.warning(f"Failed to process image, sending text only")
+                self.logger.warning("Failed to process image, sending text only")
                 return await self._send_text_only(message)
 
             # Create BufferedInputFile for aiogram
             image_file = BufferedInputFile(
                 file=processed_image,
-                filename=f"image_1.jpg"  #{article.id}
+                filename="image_1.jpg"  #{article.id}
             )
 
             # Send photo with caption

@@ -1,9 +1,7 @@
 # error_handler.py
 import traceback
-from typing import Optional, Dict, Any
+from typing import Dict, Any
 from datetime import datetime
-import smtplib
-from email.mime.text import MIMEText
 from config import Config
 
 

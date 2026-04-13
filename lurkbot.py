@@ -1,12 +1,8 @@
 from aiogram import Bot, Dispatcher, types
-from datetime import datetime, date, timezone, timedelta
 import logging
 from aiogram.filters.command import Command
 import asyncio
-from aiogram.enums import ParseMode
 import requests
-from aiogram.types import InputFile
-import io
 
 from config import config
 

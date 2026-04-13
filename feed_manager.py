@@ -5,8 +5,7 @@ import time
 from datetime import datetime, timedelta
 from typing import List, Optional
 from bs4 import BeautifulSoup
-import hashlib
-from models import Article, RatingResult, ArticleStatus
+from models import Article
 from config import config
 
 
