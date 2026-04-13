@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [master, main]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   test:
     name: Tests (Python ${{ matrix.python-version }})
@@ -15,6 +18,24 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.11", "3.12"]
+
+    # Dummy values so pydantic-settings can construct Settings() during import
+    env:
+      BOT_TOKEN: dummy
+      BOT_NAME: dummy
+      TG_CHANNEL_ID: dummy
+      TG_API_ID: "0"
+      TG_API_HASH: dummy
+      TG_PHONE: dummy
+      GGL_API_KEY: dummy
+      DBLOG_NAME: dummy
+      DB_HOST: localhost
+      DB_PORT: "5432"
+      DB_NAME: dummy
+      DB_USER: dummy
+      DB_PASSWORD: dummy
+      TELEGRAM_BOT_TOKEN: dummy
+      OPENAI_API_KEY: dummy
 
     steps:
       - uses: actions/checkout@v4
@@ -47,4 +68,4 @@ jobs:
         run: pip install ruff
 
       - name: Check code style
-        run: ruff check . --select E,W,F --ignore E501
+        run: ruff check .

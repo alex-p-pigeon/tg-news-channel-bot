@@ -1,9 +1,8 @@
 """Tests for AIProcessor — JSON parsing and RatingResult construction (no real API calls)."""
 import json
-import pytest
 from datetime import datetime
-from unittest.mock import MagicMock, patch, PropertyMock
-from models import Article, ArticleStatus, RatingResult
+from unittest.mock import MagicMock, patch
+from models import Article, RatingResult
 from ai_processor import AIProcessor
 
 

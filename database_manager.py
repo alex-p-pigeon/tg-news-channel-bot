@@ -1,12 +1,11 @@
 # database_manager.py
 import psycopg2
-from psycopg2 import pool, extras
+from psycopg2 import extras
 from psycopg2.errors import DatabaseError
 from typing import List, Optional
 from contextlib import contextmanager
-import json
 from config import config
-from models import Article, RatingResult, ArticleStatus
+from models import Article, ArticleStatus
 
 
 class DatabaseManager:

@@ -1,6 +1,5 @@
 """Tests for AutopostController scheduling logic (no DB/API connections)."""
 import pytest
-from datetime import datetime
 from unittest.mock import MagicMock, AsyncMock, patch
 
 

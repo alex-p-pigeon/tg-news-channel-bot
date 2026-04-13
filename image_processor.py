@@ -2,12 +2,9 @@
 import requests
 from PIL import Image, ImageOps
 import io
-import os
-from typing import Optional, Tuple
+from typing import Optional
 from urllib.parse import urlparse
-import tempfile
 import logging
-from pathlib import Path
 
 
 class ImageProcessor:
@@ -202,7 +199,7 @@ class ImageProcessor:
                 response = self.session.head(url, timeout=5)
                 content_type = response.headers.get('content-type', '').lower()
                 return content_type.startswith('image/')
-            except:
+            except Exception:
                 return False
 
         except Exception:

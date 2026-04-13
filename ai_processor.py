@@ -1,12 +1,10 @@
 # ai_processor.py
 from openai import OpenAI
 import json
-import time
-from typing import Tuple, Optional
+from typing import Optional
 from tenacity import retry, stop_after_attempt, wait_exponential
-from models import Article, RatingResult, ArticleStatus
+from models import Article, RatingResult
 from config import config
-import random
 from AIScenarioManager import ScenarioManager
 
 

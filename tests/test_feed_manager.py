@@ -1,5 +1,4 @@
 """Tests for FeedManager — article parsing logic (no network calls)."""
-import pytest
 from datetime import datetime
 from unittest.mock import MagicMock, patch
 from models import Article, ArticleStatus

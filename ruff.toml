@@ -1,0 +1,16 @@
+[lint]
+select = ["E", "W", "F"]
+ignore = ["E501"]  # line too long — prompt strings are intentionally long
+
+[lint.per-file-ignores]
+# Prompt templates contain intentional whitespace inside multi-line strings
+"ai_processor.py" = ["W291", "W293"]
+"AIScenarioManager.py" = ["W291", "W293"]
+# SQL multi-line strings have trailing whitespace by convention
+"database_manager.py" = ["W291", "W293"]
+"config_manager.py" = ["W291", "W293", "F821"]
+# Deprecated/utility files — not part of main pipeline
+"lurkbot.py" = ["F841"]
+"error_handler.py" = ["F821"]
+# Exclude virtual environment
+"tgnews/**" = ["ALL"]

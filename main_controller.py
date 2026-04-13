@@ -1,13 +1,9 @@
 # main_controller.py
 import asyncio
-import schedule
-import time
 from datetime import datetime, timedelta
 import logging
-from typing import List, Optional
 from config import config
 from database_manager import DatabaseManager
-from models import Article, RatingResult, ArticleStatus
 from feed_manager import FeedManager
 from ai_processor import AIProcessor
 from telegram_manager import TelegramManager
