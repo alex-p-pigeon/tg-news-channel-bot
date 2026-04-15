@@ -6,7 +6,7 @@ Automated Telegram channel bot that fetches movie/entertainment news from RSS, s
 
 1. **Fetches** articles from [Deadline.com](https://deadline.com) RSS feed on a configurable interval
 2. **Rates** each article via GPT-4 on two axes — general interest (0–100) and suitability for the channel's style (0–100)
-3. **Rewrites** the top-scoring article in one of four satirical styles (Lurkmore, deadpan academic, internet shitposter, Soviet cynic)
+3. **Rewrites** the top-scoring article in one of four satirical styles
 4. **Posts** the result to a Telegram channel, with an optimized image attached
 5. **Schedules** itself dynamically — active during daytime (100–140 min intervals), quiet overnight (4–4.5 h intervals)
 
