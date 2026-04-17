@@ -147,8 +147,6 @@ Each article is rated by GPT-4 on two dimensions:
 
 Only articles exceeding both `MIN_RATING_THRESHOLD` (60) and `MIN_LURKABLE_THRESHOLD` (70) are published.
 
-### Writing styles
-
 ## Running tests
 
 ```bash
