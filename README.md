@@ -12,6 +12,8 @@ Automated Telegram channel bot that fetches movie/entertainment news from RSS, s
 
 ## Architecture
 
+<img src="architecture.svg" alt="Architecture diagram" width="500">
+
 ```
 RSS Feed (Deadline.com)
         │
