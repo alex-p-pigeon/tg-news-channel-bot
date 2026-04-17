@@ -149,15 +149,6 @@ Only articles exceeding both `MIN_RATING_THRESHOLD` (60) and `MIN_LURKABLE_THRES
 
 ### Writing styles
 
-| Style | Description |
-|---|---|
-| `lurk` | Lurkmore.ru style — sarcastic, black humor, internet folklore |
-| `deadpan academic` | Pseudo-intellectual irony |
-| `inet shitposter` | Chaotic meme energy, Discord/TikTok register |
-| `old cynic` | Soviet grandpa skepticism |
-
-One style is selected at random per post.
-
 ## Running tests
 
 ```bash
